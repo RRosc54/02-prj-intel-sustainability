@@ -62,8 +62,9 @@ section {
   display: flex;
   gap: 25px;
   overflow-x: auto;
-  padding: 50px 50px;
+  padding: 50px;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 50px;
 }
 
 /* Timeline cards */
@@ -78,6 +79,11 @@ section div {
   box-shadow: 0 8px 20px rgba(0, 104, 181, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #0068b5;
+}
+
+/* Make the final card snap into place at the end of the timeline too */
+section div:last-child {
+  scroll-snap-align: end;
 }
 
 /* Hover effect for cards */
