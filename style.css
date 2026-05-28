@@ -1,1 +1,194 @@
-/* Add your CSS here */
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main page styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+header {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #0068b5, #00a3e0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Centers hero content */
+header div {
+  max-width: 800px;
+}
+
+/* Intel logo */
+header img {
+  width: 160px;
+  margin-bottom: 25px;
+}
+
+/* Main title */
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Hero paragraph */
+header p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* TIMELINE SECTION */
+section {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 50px 30px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Timeline cards */
+section div {
+  background-color: white;
+  min-width: 280px;
+  max-width: 280px;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 104, 181, 0.15);
+  border-top: 6px solid #0068b5;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for cards */
+section div:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 104, 181, 0.3);
+}
+
+/* Year */
+section h2 {
+  color: #0068b5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Milestone title */
+section h3 {
+  color: #111;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Card paragraph */
+section p {
+  font-size: 0.95rem;
+  color: #444;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+/* Reveal detail more clearly on hover */
+section div:hover p {
+  opacity: 1;
+}
+
+/* Optional image styling if you add images inside cards */
+section img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* Bottom instruction text */
+body > p {
+  text-align: center;
+  padding: 25px;
+  font-weight: bold;
+  color: #0068b5;
+}
+
+/* Custom scrollbar */
+section::-webkit-scrollbar {
+  height: 10px;
+}
+
+section::-webkit-scrollbar-track {
+  background: #dbe8f3;
+  border-radius: 10px;
+}
+
+section::-webkit-scrollbar-thumb {
+  background: #0068b5;
+  border-radius: 10px;
+}
+
+section::-webkit-scrollbar-thumb:hover {
+  background: #004f8c;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header {
+    min-height: 55vh;
+    padding: 40px 20px;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 30px 20px;
+  }
+
+  section div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  section div:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section div {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 1.7rem;
+  }
+}
